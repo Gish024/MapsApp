@@ -50,12 +50,12 @@ const PlaceNavigator = () => {
         <PlaceStack.Screen
           name="Detalle"
           component={PlaceDetailScreen}
-          options={{ title: "Detalle direccion" }}
+          options={{ title: "Detalle dirección" }}
         />
         <PlaceStack.Screen
           name="Nuevo"
           component={NewPlaceScreen}
-          options={{ title: "Nueva direccion" }}
+          options={{ title: "Nueva dirección" }}
         />
         <PlaceStack.Screen
           name="Map"

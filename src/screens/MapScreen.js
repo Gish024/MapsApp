@@ -10,7 +10,7 @@ const initialRegion = {
 };
 
 const MapScreen = ({ navigation }) => {
-  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState();
 
   const handleSelectedLocation = (event) => {
     setSelectedLocation({
@@ -20,9 +20,13 @@ const MapScreen = ({ navigation }) => {
   };
 
   const handleSaveLocation = () => {
-    if (selectedLocation) {
-      navigation.navigate("Nuevo", { mapLocation: selectedLocation });
-    }
+    /* console.log(selectedLocation);*/
+    navigation.navigate("Nuevo", { 
+      mapLocation: {
+        lat: 0.06587304174900055,
+        lng: 52.24742074398264,
+      },
+    });
   };
 
 
@@ -30,7 +34,7 @@ const MapScreen = ({ navigation }) => {
     navigation.setOptions({
       headerRight: () => (
         <TouchableOpacity onPress={handleSaveLocation}>
-          <Ionicons name="md-save-outline" color="black" size={22} />
+          <Ionicons name="md-save-outline" color="blue" size={22} />
         </TouchableOpacity>
       ),
     });
@@ -41,7 +45,7 @@ const MapScreen = ({ navigation }) => {
       provider="google"
       initialRegion={initialRegion}
       style={styles.container}
-      onPress={handleSelectedLocation}
+      onPress={handleSelectedLocation}      
     >
       {selectedLocation && (
         <Marker

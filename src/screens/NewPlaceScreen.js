@@ -21,7 +21,7 @@ const NewPlaceScreen = ({ navigation, route }) => {
   const [location, setLocation] = useState();
 
   useEffect(() => {
-    console.log(route, "Nueva Direccion");
+    console.log(route, "Nueva Dirección");
   }, [route]);
 
   const handleTitleChange = (text) => setTitle(text);
@@ -34,7 +34,7 @@ const NewPlaceScreen = ({ navigation, route }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.label}>Titulo</Text>
+        <Text style={styles.label}>Título</Text>
         <TextInput
           style={styles.input}
           value={title}
@@ -46,7 +46,7 @@ const NewPlaceScreen = ({ navigation, route }) => {
           mapLocation={route?.params?.mapLocation}
         />
         <Button
-          title="Grabar direccion"
+          title="Guardar dirección"
           color={COLORS.MAROON}
           onPress={handleSave}
         />

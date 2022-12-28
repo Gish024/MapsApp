@@ -5,7 +5,9 @@ import Map from "../constants/Map";
 export const ADD_PLACE = "ADD_PLACE";
 
 export const addPlace = (title, image, location) => {
+  
   return async (dispatch) => {
+    
     const response = await fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.lat},${location.lng}&key=${Map.API_KEY}`
     );

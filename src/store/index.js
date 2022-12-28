@@ -1,8 +1,7 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 
-// reducers
 import PlacesReducer from "./places.reducer";
+import thunk from "redux-thunk";
 
 const RootReducer = combineReducers({
   places: PlacesReducer,

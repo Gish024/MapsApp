@@ -14,7 +14,7 @@ const ImageSelector = (props) => {
     if (status !== "granted") {
       Alert.alert(
         "Permisos insuficientes",
-        "Necesita dar permisos a la camara para usar la aplicacion",
+        "Necesita dar permisos a la cámara para usar la aplicación",
         [{ text: "OK" }]
       );
       return false;

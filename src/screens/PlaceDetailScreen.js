@@ -1,8 +1,9 @@
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import React, { useEffect } from "react";
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
-import { useSelector } from "react-redux";
-import MapPreview from "../components/MapPreview";
+
 import { COLORS } from "../constants";
+import MapPreview from "../components/MapPreview";
+import { useSelector } from "react-redux";
 
 const PlaceDetailScreen = ({ route }) => {
   const { placeId } = route.params;
@@ -28,7 +29,7 @@ const PlaceDetailScreen = ({ route }) => {
           style={styles.map}
           location={{ lat: place.lat, lng: place.lng }}
         >
-          <Text>Ubicacion no disponible</Text>
+          <Text>Ubicación no disponible</Text>
         </MapPreview>
       </View>
     </ScrollView>

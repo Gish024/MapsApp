@@ -25,7 +25,7 @@ const LocationSelector = ({ onLocation, mapLocation }) => {
     if (status !== "granted") {
       Alert.alert(
         "Permisos insuficientes",
-        "Necesita dar permisos de la localizacion para usar la aplicacion",
+        "Necesita dar permisos de la localización para usar la aplicación",
         [{ text: "OK" }]
       );
       return false;
